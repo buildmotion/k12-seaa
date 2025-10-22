@@ -74,6 +74,15 @@ Path from current task engine to workflow orchestration:
 - Risk mitigation
 - Timeline and effort estimates
 
+### 7. [Rules Engine Evaluation](./07-rules-engine-evaluation.md)
+Strategic evaluation of rules engine implementation:
+- Rules engine fundamentals and benefits
+- Business Actions framework integration
+- K-12 SEAA rules analysis (500+ rules)
+- Architecture integration patterns
+- ROI analysis and recommendations
+- Implementation roadmap
+
 ---
 
 ## Quick Reference
@@ -87,10 +96,12 @@ Path from current task engine to workflow orchestration:
 | **Azure Event Grid** | Event routing, pub/sub, decoupling | Domain events, system integration, real-time notifications |
 | **Elsa Workflows** | Complex business workflows, versioning | Enrollment processes, certification workflows, compliance tracking |
 | **MassTransit Saga** | Distributed transactions, compensation | Payment processing, multi-service coordination, financial workflows |
+| **Rules Engine** | Business rule evaluation, validation | Eligibility checks, payment validation, compliance rules, allowable expenses |
 
 ### Key Metrics
 
 - **100+** identified workflows across system
+- **500+** business rules requiring evaluation and validation
 - **4** applications (Admin, Providers, Schools, Households)
 - **10+** third-party integrations requiring orchestration
 - **Multi-month** long-running processes (application lifecycle)
@@ -130,7 +141,8 @@ All claims are backed by inline citations to authoritative sources.
 1. **Start with [Technology Overview](./01-technology-overview.md)** to understand available options
 2. **Review [K-12 Workflow Analysis](./02-k12-workflow-analysis.md)** to understand system requirements
 3. **Study [Architecture Recommendations](./03-architecture-recommendations.md)** for proposed solution
-4. **Reference [Implementation Patterns](./04-implementation-patterns.md)** during development
+4. **Read [Rules Engine Evaluation](./07-rules-engine-evaluation.md)** for business rules integration strategy
+5. **Reference [Implementation Patterns](./04-implementation-patterns.md)** during development
 
 ---
 
@@ -149,6 +161,8 @@ All claims are backed by inline citations to authoritative sources.
 ✅ **How do we send emails and notifications?** Event-driven triggers with Azure Functions + SendGrid/Azure Communication Services
 
 ✅ **How do we handle existing tasks?** Incremental migration with coexistence patterns during transition
+
+✅ **Should we use a rules engine?** Yes, absolutely. Rules engine complements workflows by separating business rule evaluation from orchestration logic. See [Rules Engine Evaluation](./07-rules-engine-evaluation.md) for comprehensive analysis.
 
 ---
 
